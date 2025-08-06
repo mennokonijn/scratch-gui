@@ -32,8 +32,8 @@ jobs:
 
           echo "Simulating $COUNT deployments with failure ratio $FAIL_RATIO"
 
-          # Get N latest commits from master branch
-          COMMITS=$(git rev-list origin/master | head -n "$COUNT")
+          # Get N latest commits from develop branch
+          COMMITS=$(git rev-list origin/develop | head -n "$COUNT")
           i=1
 
           for SHA in $COMMITS; do
